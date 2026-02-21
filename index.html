@@ -425,12 +425,12 @@
             { id: 106, category: 'adult', name: 'Original Legacy Sweats', price: 50.00, colors: [{id:'ast',name:'Assortment',hex:'linear-gradient(135deg, #ff0000, #9ca3af, #000000)'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'},{id:'red',name:'Red',hex:'#ff0000'}], manualImages: ['assortment sweatpants #2.jpg','grey sweatpant front.jpg','black sweatpants front.jpg','red sweatpants front.jpg']},
             { id: 107, category: 'adult', name: 'Parallel Motion Sweats', price: 50.00, colors: [{id:'ast',name:'Assortment',hex:'linear-gradient(135deg, #00ff00 0%, #0070ff 33%, #000000 66%, #ff85d5 100%)'},{id:'grn',name:'Green Striped',hex:'#00ff00'},{id:'blu',name:'Blue Striped',hex:'#0070ff'},{id:'blk',name:'Black Striped',hex:'#000000'},{id:'pnk',name:'Pink Striped',hex:'#ff85d5'}], manualImages: ['assortment striped sweatpants.jpg','green sweatpants front.jpg','blue stripped sweatpants front.jpg','black stripped sweatpants front.jpg','pink stripped sweatpants front.jpg']},
             { id: 108, category: 'adult', name: 'Original Legacy Bundle', price: 90.00, colors: [{id:'blk',name:'Black',hex:'#000000'},{id:'red',name:'Red',hex:'#ff0000'},{id:'gry',name:'Grey',hex:'#9ca3af'}], manualImages: ['assortment kits.jpg']},
-            { id: 109, category: 'adult', name: 'Original Jumper Suit Set', price: 85.00, colors: [{id:'red',name:'Red',hex:'#ff0000'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/red%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/grey%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/6d496877e60c822c8baed5dc28642b0c4f450795/Websites%20Images/black%20jumper%20suit%20set.jpg']},
+            { id: 109, category: 'adult', name: 'Original Jumper Suit Set', price: 80.00, colors: [{id:'red',name:'Red',hex:'#ff0000'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/red%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/grey%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/6d496877e60c822c8baed5dc28642b0c4f450795/Websites%20Images/black%20jumper%20suit%20set.jpg']},
             { id: 110, category: 'adult', name: 'Originals Leather Jacket', price: 300.00, preorder: true, colors: [{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['Black leather jacket front.jpg', 'Black leather jacket front #2.jpg', 'Black leather jacket back.jpg'], customBaseUrl: newBaseUrl },
             { id: 111, category: 'adult', name: 'Originals Camo Jacket', price: 75.00, colors: [{id:'grn',name:'Green',hex:'#4b5320'}], manualImages: ['Camo jacket front.jpg', 'Camo jacket back.jpg'], customBaseUrl: newBaseUrl },
             { id: 112, category: 'adult', name: 'Exclusive (OG) Laundry T', price: 35.00, colors: [{id:'wht',name:'White/Grey',hex:'#f3f4f6'}], manualImages: ['White grey long sleeve front.jpg', 'White grey long sleeve back.jpg'], customBaseUrl: newBaseUrl },
             { id: 113, category: 'adult', name: 'Colorful Originals Hoodie', price: 120.00, colors: [{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['black (colorful) originals hoodie front.jpg', 'black (colorful) originals hoodie front #2.jpg', 'black exclusive laundry hoodie back.jpg', 'black exclusive laundry hoodie back #2.jpg'], customBaseUrl: newBaseUrl },
-            { id: 114, category: 'adult', name: 'Originals Pink Camo Jacket', price: 75.00, colors: [{id:'pnk',name:'Pink',hex:'#ff85d5'}], manualImages: ['Pink camo jacket front.jpg', 'Pink camo jacket back.jpg'], customBaseUrl: newBaseUrl },
+            { id: 114, category: 'adult', name: 'Originals Pink Camo Jacket', price: 75.00, colors: [{id:'pnk',name:'Pink',hex:'#ffb6c1'}], manualImages: ['Pink camo jacket front.jpg', 'Pink camo jacket back.jpg'], customBaseUrl: newBaseUrl },
             { id: 115, category: 'adult', name: 'Original Icon Crown', price: 25.00, colors: [{id:'grn',name:'Green Cap',hex:'#22c55e'},{id:'red',name:'Red Cap',hex:'#ff0000'},{id:'pnk',name:'Pink Cap',hex:'#ff85d5'}], manualImages: ['green hat front.jpg','green hat back.jpg','red hat front.jpg','red hat back.jpg','pink hat front.jpg']},
             { id: 116, category: 'adult', name: 'Nomad Thermal Knit', price: 20.00, colors: [{id:'red',name:'Red',hex:'#ff0000'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['red sockhat front.jpg','grey sockhat front.jpg','black sockhat front.jpg']},
             { id: 117, category: 'adult', name: 'Pristine Legacy Jerseys', price: 50.00, colors: [{id:'pnk',name:'Pink',hex:'#ff85d5'}], manualImages: ['pink shirt front.jpg','pink shirt back.jpg']},
@@ -531,7 +531,9 @@
             const p = products.find(i => i.id === pid);
             const card = input.closest('.product-card');
             const track = card.querySelector('.image-track');
-            const mainColor = colorName.toLowerCase().split(' ')[0];
+            
+            // Split by space or slash to handle colors like "White/Grey" properly
+            const mainColor = colorName.toLowerCase().split(/[\s/]+/)[0];
             let idx = p.images.findIndex(img => img.toLowerCase().includes(mainColor));
             
             // Fallback: If image name doesn't explicitly match the color name exactly, default to 0 to prevent issues
@@ -548,7 +550,15 @@
             const s = document.querySelector(`input[name="size-${pid}"]:checked`);
             const c = document.querySelector(`input[name="color-${pid}"]:checked`);
             if(!s || !c) return showNotification('Select size and color', 'error');
-            cart.push({ cartId: Date.now(), ...p, selSize: s.value, selColor: c.value });
+
+            // Find matching image for selected color
+            const colorName = c.value;
+            const mainColor = colorName.toLowerCase().split(/[\s/]+/)[0];
+            let imgIdx = p.images.findIndex(img => img.toLowerCase().includes(mainColor));
+            if (imgIdx === -1) imgIdx = 0;
+            const selImage = p.images[imgIdx];
+
+            cart.push({ cartId: Date.now(), ...p, selSize: s.value, selColor: colorName, selImage: selImage });
             updateCartUI();
             showNotification(`${p.name} ${p.preorder ? 'pre-ordered' : 'added'}!`);
         }
@@ -568,7 +578,7 @@
             list.innerHTML = cart.map(i => {
                 total += i.price;
                 return `<div class="flex items-center space-x-6 bg-slate-800/40 p-5 rounded-3xl border border-slate-700/50 text-white">
-                    <img src="${i.images[0]}" class="w-24 h-28 object-cover rounded-2xl">
+                    <img src="${i.selImage || i.images[0]}" class="w-24 h-28 object-cover rounded-2xl">
                     <div class="flex-grow"><h4 class="font-bold text-lg">${i.name} ${i.preorder ? '<span class="text-[10px] text-amber-400 uppercase tracking-wide ml-1 font-normal">(Pre-Order)</span>' : ''}</h4><p class="text-sm text-slate-400">${i.selColor} • ${i.selSize}</p><p class="text-sky-400 font-bold mt-2">$${i.price.toFixed(2)}</p></div>
                     <button onclick="removeFromCart(${i.cartId})" class="p-3 text-slate-500 hover:text-rose-400 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg></button>
                 </div>`;
@@ -605,7 +615,18 @@
             if (isFreeShipCodeActive || subtotal > 100) shipping = 0;
             let tax = subtotal * 0.04225;
             
-            list.innerHTML = cart.map(i => `<div class="flex items-center justify-between text-xs text-white"><span>${i.name} ${i.preorder ? '<span class="text-amber-400">(Pre-Order)</span>' : ''} (${i.selSize})</span><span>$${i.price.toFixed(2)}</span></div>`).join('');
+            list.innerHTML = cart.map(i => `
+                <div class="flex items-center justify-between text-xs text-white mb-3">
+                    <div class="flex items-center gap-3">
+                        <img src="${i.selImage || i.images[0]}" class="w-10 h-10 object-cover rounded-md border border-slate-700">
+                        <div class="flex flex-col">
+                            <span>${i.name} ${i.preorder ? '<span class="text-amber-400">(Pre-Order)</span>' : ''}</span>
+                            <span class="text-slate-400 text-[10px]">${i.selColor} • ${i.selSize}</span>
+                        </div>
+                    </div>
+                    <span class="font-bold">$${i.price.toFixed(2)}</span>
+                </div>
+            `).join('');
             document.getElementById('checkout-subtotal').innerText = `$${subtotal.toFixed(2)}`;
             document.getElementById('checkout-tax').innerText = `$${tax.toFixed(2)}`;
             const shipElem = document.getElementById('checkout-shipping');
