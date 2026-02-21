@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
+    <!-- PayPal SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=AYUPnM018VMQqM2mBKbqZev5Rvsa8TApN8EjhrRFQf4WwjJxs1kru1t9W0DjyDBDYxTCxxsU_8hHe_RA&currency=USD&enable-funding=venmo,card&intent=capture" 
             async 
             onload="window.paypalLoaded = true" 
@@ -99,6 +100,7 @@
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav class="glass fixed top-0 w-full z-50">
         <div class="bg-sky-600 text-white text-[10px] md:text-xs font-bold text-center py-1 uppercase tracking-widest border-b border-sky-500">
             Free Standard Shipping on Orders Over $100
@@ -139,6 +141,7 @@
         </div>
     </nav>
 
+    <!-- SHOP VIEW -->
     <div id="view-shop" class="view-transition">
         <section class="relative w-full h-screen md:h-[70vh] md:w-[85%] md:mx-auto md:rounded-3xl md:mt-24 overflow-hidden group border border-slate-700/50 shadow-2xl">
             <div id="hero-track" class="flex w-[400%] h-full transition-transform duration-700 ease-in-out">
@@ -191,6 +194,7 @@
         </main>
     </div>
 
+    <!-- ABOUT VIEW -->
     <div id="view-about" class="view-transition hidden opacity-0 text-white">
         <section class="pt-32 pb-20 px-4">
             <div class="container mx-auto">
@@ -207,6 +211,7 @@
         </section>
     </div>
 
+    <!-- CONTACT VIEW -->
     <div id="view-contact" class="view-transition hidden opacity-0 text-white">
         <section class="pt-32 pb-20 px-4">
             <div class="container mx-auto">
@@ -223,6 +228,7 @@
         </section>
     </div>
 
+    <!-- BAG VIEW -->
     <div id="view-cart" class="view-transition hidden opacity-0 text-white">
         <section class="pt-32 pb-20 px-4">
             <div class="container mx-auto">
@@ -251,6 +257,7 @@
         </section>
     </div>
 
+    <!-- CHECKOUT VIEW -->
     <div id="view-checkout" class="view-transition hidden opacity-0 text-white">
         <section class="pt-32 pb-20 px-4">
             <div class="container mx-auto max-w-6xl">
@@ -260,6 +267,7 @@
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     <div class="lg:col-span-2 space-y-8">
+                        <!-- Step 1 -->
                         <div class="bg-slate-800/50 border border-slate-700/50 p-8 rounded-3xl backdrop-blur-md">
                             <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
                                 <span class="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
@@ -293,6 +301,7 @@
                             </div>
                         </div>
 
+                        <!-- Step 2 -->
                         <div class="bg-slate-800/50 border border-slate-700/50 p-8 rounded-3xl">
                             <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><span class="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>Shipping Method</h3>
                             <div class="space-y-4">
@@ -313,12 +322,14 @@
                             </div>
                         </div>
 
+                        <!-- Step 3 -->
                         <div class="bg-slate-800/50 border border-slate-700/50 p-8 rounded-3xl">
                             <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><span class="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>Payment Method</h3>
                             <div id="paypal-button-container" class="w-full min-h-[150px]"></div>
                         </div>
                     </div>
 
+                    <!-- Order Summary sidebar -->
                     <div class="lg:col-span-1">
                         <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl sticky top-32 backdrop-blur-md">
                             <h3 class="font-serif text-2xl font-bold mb-6">Review Order</h3>
@@ -347,6 +358,7 @@
         </section>
     </div>
 
+    <!-- Modals & Lightbox -->
     <div id="generalModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[120] hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 text-white">
         <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full text-center shadow-2xl transform scale-95 transition-transform duration-300">
             <div id="modal-icon" class="mx-auto flex items-center justify-center h-16 w-16 rounded-full mb-6 text-white"></div>
@@ -414,7 +426,7 @@
             { id: 106, category: 'adult', name: 'Original Legacy Sweats', price: 50.00, colors: [{id:'ast',name:'Assortment',hex:'linear-gradient(135deg, #ff0000, #9ca3af, #000000)'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'},{id:'red',name:'Red',hex:'#ff0000'}], manualImages: ['assortment sweatpants #2.jpg','grey sweatpant front.jpg','black sweatpants front.jpg','red sweatpants front.jpg']},
             { id: 107, category: 'adult', name: 'Parallel Shades Sweats', price: 50.00, colors: [{id:'ast',name:'Assortment',hex:'linear-gradient(135deg, #00ff00 0%, #0070ff 33%, #000000 66%, #ff85d5 100%)'},{id:'grn',name:'Green Striped',hex:'#00ff00'},{id:'blu',name:'Blue Striped',hex:'#0070ff'},{id:'blk',name:'Black Striped',hex:'#000000'},{id:'pnk',name:'Pink Striped',hex:'#ff85d5'}], manualImages: ['assortment striped sweatpants.jpg','green sweatpants front.jpg','blue stripped sweatpants front.jpg','black stripped sweatpants front.jpg','pink stripped sweatpants front.jpg']},
             { id: 108, category: 'adult', name: 'Original Legacy Bundle (Set)', price: 90.00, colors: [{id:'ast',name:'Assorted Colors',hex:'linear-gradient(135deg, #000000, #ff0000, #9ca3af)'}], manualImages: ['assortment kits.jpg']},
-            { id: 109, category: 'adult', name: 'A$ I AM (Original) Jumper Set (2 Pcs)', price: 50.00, colors: [{id:'red',name:'Red',hex:'#ff0000'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/red%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/grey%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/6d496877e60c822c8baed5dc28642b0c4f450795/Websites%20Images/black%20jumper%20suit%20set.jpg']},
+            { id: 109, category: 'adult', name: 'A$ I AM (Original) Jumper', price: 50.00, colors: [{id:'red',name:'Red',hex:'#ff0000'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/red%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/grey%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/6d496877e60c822c8baed5dc28642b0c4f450795/Websites%20Images/black%20jumper%20suit%20set.jpg']},
             { id: 110, category: 'adult', name: 'Originals Leather Jacket', price: 300.00, preorder: true, colors: [{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['Black leather jacket front.jpg', 'Black leather jacket front #2.jpg', 'Black leather jacket back.jpg'], customBaseUrl: newBaseUrl },
             { id: 111, category: 'adult', name: 'Originals Camo Jacket', price: 75.00, colors: [{id:'grn',name:'Green',hex:'#4b5320'}], manualImages: ['Camo jacket front.jpg', 'Camo jacket back.jpg'], customBaseUrl: newBaseUrl },
             { id: 112, category: 'adult', name: 'Exclusive (OG) Laundry T', price: 35.00, colors: [{id:'wht',name:'White/Grey',hex:'#f3f4f6'}], manualImages: ['White grey long sleeve front.jpg', 'White grey long sleeve back.jpg'], customBaseUrl: newBaseUrl },
