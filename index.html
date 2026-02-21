@@ -118,7 +118,6 @@
 
             <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest items-center text-white">
                 <a href="javascript:void(0)" onclick="navigate('shop')" id="nav-shop" class="text-sky-400 border-b-2 border-sky-400 pb-1 nav-link text-white">Shop</a>
-                <a href="javascript:void(0)" onclick="filterCategory('adult')" id="nav-adults" class="hover:text-sky-400 transition-colors nav-link text-white">Adults</a>
                 <a href="javascript:void(0)" onclick="navigate('about')" id="nav-about" class="hover:text-sky-400 transition-colors nav-link text-white">About</a>
                 <a href="javascript:void(0)" onclick="navigate('contact')" id="nav-contact" class="hover:text-sky-400 transition-colors nav-link text-white">Contact</a>
             </div>
@@ -134,7 +133,6 @@
         <div id="mobile-menu" class="md:hidden bg-slate-900 border-t border-slate-800 text-white">
             <div class="container mx-auto px-4 py-4 space-y-4">
                 <a href="javascript:void(0)" onclick="navigate('shop'); toggleMobileMenu()" class="block text-slate-300 hover:text-white font-medium">Shop All</a>
-                <a href="javascript:void(0)" onclick="filterCategory('adult'); toggleMobileMenu()" class="block text-slate-300 hover:text-white font-medium">Adults</a>
                 <div class="border-t border-slate-800 pt-4 space-y-3">
                     <a href="javascript:void(0)" onclick="navigate('about'); toggleMobileMenu()" class="block text-slate-300 hover:text-white">About Us</a>
                     <a href="javascript:void(0)" onclick="navigate('contact'); toggleMobileMenu()" class="block text-slate-300 hover:text-white">Contact</a>
@@ -187,7 +185,6 @@
                 </div>
                 <div class="flex space-x-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
                     <button onclick="filterCategory('all')" class="cat-filter px-6 py-2 rounded-full bg-sky-500 border border-sky-500 text-sm text-white" data-category="all">All</button>
-                    <button onclick="filterCategory('adult')" class="cat-filter px-6 py-2 rounded-full bg-slate-800 border border-slate-700 text-sm text-white" data-category="adult">Adult</button>
                 </div>
             </div>
             <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
@@ -425,7 +422,7 @@
             { id: 106, category: 'adult', name: 'Original Legacy Sweats', price: 50.00, colors: [{id:'ast',name:'Assortment',hex:'linear-gradient(135deg, #ff0000, #9ca3af, #000000)'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'},{id:'red',name:'Red',hex:'#ff0000'}], manualImages: ['assortment sweatpants #2.jpg','grey sweatpant front.jpg','black sweatpants front.jpg','red sweatpants front.jpg']},
             { id: 107, category: 'adult', name: 'Parallel Motion Sweats', price: 50.00, colors: [{id:'ast',name:'Assortment',hex:'linear-gradient(135deg, #00ff00 0%, #0070ff 33%, #000000 66%, #ff85d5 100%)'},{id:'grn',name:'Green Striped',hex:'#00ff00'},{id:'blu',name:'Blue Striped',hex:'#0070ff'},{id:'blk',name:'Black Striped',hex:'#000000'},{id:'pnk',name:'Pink Striped',hex:'#ff85d5'}], manualImages: ['assortment striped sweatpants.jpg','green sweatpants front.jpg','blue stripped sweatpants front.jpg','black stripped sweatpants front.jpg','pink stripped sweatpants front.jpg']},
             { id: 108, category: 'adult', name: 'Original Legacy Bundle', price: 90.00, colors: [{id:'blk',name:'Black',hex:'#000000'},{id:'red',name:'Red',hex:'#ff0000'},{id:'gry',name:'Grey',hex:'#9ca3af'}], manualImages: ['assortment kits.jpg']},
-            { id: 109, category: 'adult', name: 'Original Jumper Suit Set', price: 80.00, colors: [{id:'red',name:'Red',hex:'#ff0000'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/red%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/grey%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/6d496877e60c822c8baed5dc28642b0c4f450795/Websites%20Images/black%20jumper%20suit%20set.jpg']},
+            { id: 109, category: 'adult', name: 'A$ I AM (Original) Jumper Set', price: 50.00, colors: [{id:'red',name:'Red',hex:'#ff0000'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/red%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/fafb20bd8cd52678c8aff7981ad969c68002ab55/Websites%20Images/grey%20jumper%20suit%20set.jpg', 'https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/6d496877e60c822c8baed5dc28642b0c4f450795/Websites%20Images/black%20jumper%20suit%20set.jpg']},
             { id: 110, category: 'adult', name: 'Originals Leather Jacket', price: 300.00, preorder: true, colors: [{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['Black leather jacket front.jpg', 'Black leather jacket front #2.jpg', 'Black leather jacket back.jpg'], customBaseUrl: newBaseUrl },
             { id: 111, category: 'adult', name: 'Originals Camo Jacket', price: 75.00, colors: [{id:'grn',name:'Green',hex:'#4b5320'}], manualImages: ['Camo jacket front.jpg', 'Camo jacket back.jpg'], customBaseUrl: newBaseUrl },
             { id: 112, category: 'adult', name: 'Exclusive (OG) Laundry T', price: 35.00, colors: [{id:'wht',name:'White/Grey',hex:'#f3f4f6'}], manualImages: ['White grey long sleeve front.jpg', 'White grey long sleeve back.jpg'], customBaseUrl: newBaseUrl },
