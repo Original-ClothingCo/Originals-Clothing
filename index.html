@@ -400,7 +400,7 @@
             setTimeout(() => { t.classList.add('opacity-0', 'translate-x-12'); t.style.transition = 'all 0.5s ease'; setTimeout(() => t.remove(), 500); }, 3000);
         }
 
-        let cart = [];
+        let cart = JSON.parse(localStorage.getItem('originals_cart')) || [];
         let activeCategory = 'all';
         let isFreeShipCodeActive = false;
         let currentHeroSlide = 0;
@@ -409,6 +409,10 @@
         let currentLightboxImageIndex = 0;
         let touchStartX = 0;
         let touchEndX = 0;
+
+        function saveCart() {
+            localStorage.setItem('originals_cart', JSON.stringify(cart));
+        }
 
         const defaultBaseUrl = "https://raw.githubusercontent.com/Original-ClothingCo/Original-Clothing/ff8dfac8bc5702c6bb8d008ff8510b71bf143d6d/Websites%20Images/";
         const newBaseUrl = "https://raw.githubusercontent.com/Original-ClothingCo/Originals-Clothing/ad90ace3c02eda4371fa54fbbaa00ce6819f1eaf/Websites%20Images/";
@@ -556,12 +560,14 @@
             const selImage = p.images[imgIdx];
 
             cart.push({ cartId: Date.now(), ...p, selSize: s.value, selColor: colorName, selImage: selImage });
+            saveCart();
             updateCartUI();
             showNotification(`${p.name} ${p.preorder ? 'pre-ordered' : 'added'}!`);
         }
 
         function removeFromCart(cid) {
             cart = cart.filter(i => i.cartId !== cid);
+            saveCart();
             updateCartUI();
             if(!document.getElementById('view-checkout').classList.contains('hidden')) updateCheckoutTotal();
         }
@@ -699,7 +705,7 @@ ${items}
         async function handleOrderSuccess(method) {
             sendOrderEmail(method);
             openModal('emerald-500', 'Order Confirmed!', `Thank you for your purchase via ${method}. A confirmation email has been forwarded to our fulfillment team.`, '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />');
-            cart = []; updateCartUI(); isFreeShipCodeActive = false;
+            cart = []; saveCart(); updateCartUI(); isFreeShipCodeActive = false;
             setTimeout(() => navigate('shop'), 4000);
         }
 
@@ -757,7 +763,7 @@ ${items}
         function startHeroAutoPlay() { heroInterval = setInterval(nextHeroSlide, 5000); }
         function handleCreditCardCheckout() { openModal('sky-500', 'Payment Required', 'Please use the secure PayPal button to complete your transaction.', '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />'); }
 
-        document.addEventListener('DOMContentLoaded', () => { renderProducts(); startHeroAutoPlay(); });
+        document.addEventListener('DOMContentLoaded', () => { renderProducts(); startHeroAutoPlay(); updateCartUI(); });
     </script>
 </body>
 </html>
