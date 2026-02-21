@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
-    <!-- PayPal SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=AYUPnM018VMQqM2mBKbqZev5Rvsa8TApN8EjhrRFQf4WwjJxs1kru1t9W0DjyDBDYxTCxxsU_8hHe_RA&currency=USD&enable-funding=venmo,card&intent=capture" 
             async 
             onload="window.paypalLoaded = true" 
@@ -100,7 +99,6 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="glass fixed top-0 w-full z-50">
         <div class="bg-sky-600 text-white text-[10px] md:text-xs font-bold text-center py-1 uppercase tracking-widest border-b border-sky-500">
             Free Standard Shipping on Orders Over $100
@@ -141,7 +139,6 @@
         </div>
     </nav>
 
-    <!-- SHOP VIEW -->
     <div id="view-shop" class="view-transition">
         <section class="relative w-full h-screen md:h-[70vh] md:w-[85%] md:mx-auto md:rounded-3xl md:mt-24 overflow-hidden group border border-slate-700/50 shadow-2xl">
             <div id="hero-track" class="flex w-[400%] h-full transition-transform duration-700 ease-in-out">
@@ -194,7 +191,6 @@
         </main>
     </div>
 
-    <!-- ABOUT VIEW -->
     <div id="view-about" class="view-transition hidden opacity-0 text-white">
         <section class="pt-32 pb-20 px-4">
             <div class="container mx-auto">
@@ -211,7 +207,6 @@
         </section>
     </div>
 
-    <!-- CONTACT VIEW -->
     <div id="view-contact" class="view-transition hidden opacity-0 text-white">
         <section class="pt-32 pb-20 px-4">
             <div class="container mx-auto">
@@ -228,7 +223,6 @@
         </section>
     </div>
 
-    <!-- BAG VIEW -->
     <div id="view-cart" class="view-transition hidden opacity-0 text-white">
         <section class="pt-32 pb-20 px-4">
             <div class="container mx-auto">
@@ -257,7 +251,6 @@
         </section>
     </div>
 
-    <!-- CHECKOUT VIEW -->
     <div id="view-checkout" class="view-transition hidden opacity-0 text-white">
         <section class="pt-32 pb-20 px-4">
             <div class="container mx-auto max-w-6xl">
@@ -267,7 +260,6 @@
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     <div class="lg:col-span-2 space-y-8">
-                        <!-- Step 1 -->
                         <div class="bg-slate-800/50 border border-slate-700/50 p-8 rounded-3xl backdrop-blur-md">
                             <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
                                 <span class="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
@@ -301,7 +293,6 @@
                             </div>
                         </div>
 
-                        <!-- Step 2 -->
                         <div class="bg-slate-800/50 border border-slate-700/50 p-8 rounded-3xl">
                             <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><span class="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>Shipping Method</h3>
                             <div class="space-y-4">
@@ -322,14 +313,12 @@
                             </div>
                         </div>
 
-                        <!-- Step 3 -->
                         <div class="bg-slate-800/50 border border-slate-700/50 p-8 rounded-3xl">
                             <h3 class="text-xl font-bold mb-6 flex items-center gap-3"><span class="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>Payment Method</h3>
                             <div id="paypal-button-container" class="w-full min-h-[150px]"></div>
                         </div>
                     </div>
 
-                    <!-- Order Summary sidebar -->
                     <div class="lg:col-span-1">
                         <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl sticky top-32 backdrop-blur-md">
                             <h3 class="font-serif text-2xl font-bold mb-6">Review Order</h3>
@@ -358,7 +347,6 @@
         </section>
     </div>
 
-    <!-- Modals & Lightbox -->
     <div id="generalModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-[120] hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 text-white">
         <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full text-center shadow-2xl transform scale-95 transition-transform duration-300">
             <div id="modal-icon" class="mx-auto flex items-center justify-center h-16 w-16 rounded-full mb-6 text-white"></div>
@@ -430,7 +418,7 @@
             { id: 110, category: 'adult', name: 'Originals Leather Jacket', price: 300.00, preorder: true, colors: [{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['Black leather jacket front.jpg', 'Black leather jacket front #2.jpg', 'Black leather jacket back.jpg'], customBaseUrl: newBaseUrl },
             { id: 111, category: 'adult', name: 'Originals Camo Jacket', price: 75.00, colors: [{id:'grn',name:'Green',hex:'#4b5320'}], manualImages: ['Camo jacket front.jpg', 'Camo jacket back.jpg'], customBaseUrl: newBaseUrl },
             { id: 112, category: 'adult', name: 'Exclusive (OG) Laundry T', price: 35.00, colors: [{id:'wht',name:'White/Grey',hex:'#f3f4f6'}], manualImages: ['White grey long sleeve front.jpg', 'White grey long sleeve back.jpg'], customBaseUrl: newBaseUrl },
-            { id: 113, category: 'adult', name: 'Originals Rainbow Rain Drops Hoodie', price: 120.00, colors: [{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['black (colorful) originals hoodie front.jpg', 'black (colorful) originals hoodie front #2.jpg', 'black exclusive laundry hoodie back.jpg', 'black exclusive laundry hoodie back #2.jpg'], customBaseUrl: newBaseUrl },
+            { id: 113, category: 'adult', name: 'Original Drop Jacket', price: 120.00, colors: [{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['black (colorful) originals hoodie front.jpg', 'black (colorful) originals hoodie front #2.jpg', 'black exclusive laundry hoodie back.jpg', 'black exclusive laundry hoodie back #2.jpg'], customBaseUrl: newBaseUrl },
             { id: 114, category: 'adult', name: 'Originals Pink Camo Jacket', price: 75.00, colors: [{id:'pnk',name:'Pink',hex:'#ffb6c1'}], manualImages: ['Pink camo jacket front.jpg', 'Pink camo jacket back.jpg'], customBaseUrl: newBaseUrl },
             { id: 115, category: 'adult', name: 'Original Icon Crown', price: 25.00, colors: [{id:'grn',name:'Green Cap',hex:'#22c55e'},{id:'red',name:'Red Cap',hex:'#ff0000'},{id:'pnk',name:'Pink Cap',hex:'#ff85d5'}], manualImages: ['green hat front.jpg','green hat back.jpg','red hat front.jpg','red hat back.jpg','pink hat front.jpg']},
             { id: 116, category: 'adult', name: 'Nomad Thermal Knit', price: 20.00, colors: [{id:'red',name:'Red',hex:'#ff0000'},{id:'gry',name:'Grey',hex:'#9ca3af'},{id:'blk',name:'Black',hex:'#000000'}], manualImages: ['red sockhat front.jpg','grey sockhat front.jpg','black sockhat front.jpg']},
@@ -475,7 +463,7 @@
             document.getElementById('no-results').classList.add('hidden');
 
             grid.innerHTML = filtered.map((p, index) => {
-                const sizes = (p.id === 115 || p.id === 116) ? ['One Size Fits All'] : ['S','M','L','XL','XXL','3XL','4XL'];
+                const sizes = p.id === 113 ? ['Medium', 'XL', '4X'] : (p.id === 115 || p.id === 116) ? ['One Size Fits All'] : ['S','M','L','XL','XXL','3XL','4XL'];
                 return `
                 <div class="product-card bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50 flex flex-col group text-white">
                     <div class="relative aspect-[3/4] overflow-hidden" ontouchstart="handleTouchStart(event)" ontouchend="handleTouchEnd(event)">
